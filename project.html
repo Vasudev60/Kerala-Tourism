@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<head>
+	<link href="https://fonts.googleapis.com/css2?family=Jersey+25+Charted&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <title>Kerala Tourism</title>
+    <link rel="icon" href="Designer.png"> 
+    <style>
+		
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #eef7f6;
+        }
+        header {
+            color:rgb(255, 255, 255);
+            padding: 10px;
+            text-align: center;
+            font-family:"Jersey+25+Charted";
+            font-size: 25px;
+            backdrop-filter: blur(16px);
+        }
+        header img{
+            position: absolute;
+            left: 20px;
+            top: 20px;
+            width: 50px;
+            height: auto;
+
+        }
+        nav {
+            background-color: #f8f9fa;
+            padding: 10px 0;
+            text-align: center;
+			font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        nav a {
+            color: #000;
+            margin: 10px;
+            font-weight: bold;
+        }
+        nav a:hover{
+            color:lawngreen;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .spot {
+            width: calc(33.33% - 20px);
+            margin-bottom: 40px;
+            border: 1px solid #000000;
+            border-radius: 5px;
+            overflow: hidden;
+            background-color: #eef7f6;
+			font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        .spot img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .spot:hover img {
+            transform: scale(1.05);
+        }
+        .spot h2 {
+            text-align: center;
+            margin-top: 10px;
+            color: #333;
+        }
+
+        .spot p {
+            text-align: center;
+            color: #666;
+        }
+        video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1; 
+        }
+		video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1; 
+        }
+        .box-container {
+			display: flex;
+			justify-content: center; /* Center align all boxes */
+			flex-wrap: wrap;
+			gap: 20px; /* Add some spacing between boxes */
+		}
+
+		.box {
+			flex: 1; /* Each box takes equal space */
+			max-width: 300px;
+			text-align: center;
+		}
+
+		.box a {
+			display: block;
+			margin-bottom: 5px;
+			text-decoration: none;
+			color: #ffffff;
+		}
+
+		.credit {
+			text-align: center;
+			margin-top: 20px;
+			font-size: 20px;
+			color: white;
+		}
+
+		h3 {
+			color: #ffffff;
+			font-weight: bold;
+			font-family: 'Poppins', sans-serif;
+		}
+
+		button:hover {
+			color: #219150;
+			background-color: black;
+		}
+
+		button {
+			color: white;
+			background-color: black;
+			border: none;
+			cursor: pointer;
+		}
+
+
+		footer {
+            border-top:2px solid white;
+			background-image: url(pattern1.jpg); 
+            backdrop-filter: blur(8px);
+		}
+		footer a:hover{
+				color: lawngreen;
+		}
+		.h1{
+			text-align: center;
+			font-family: "Merriweather";
+			color: #eef7f6;
+		}
+        .logout-btn {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            font-size: 16px;
+            backdrop-filter: blur(1px);
+            font-family: 'Poppins', sans-serif;
+            color:white;
+            text-decoration:none;
+
+        }
+        .logout-btn:hover {
+            color: lawngreen;
+        }
+    </style>
+</head>
+<body>
+    <video autoplay muted loop>
+        <source src="./login (1).mp4" type="video/mp4">
+    </video>
+
+    <header>
+        <h1>Kerala Tourism</h1>
+        <img  src="Designer(2).ico" alt="icon">
+        <a class="logout-btn" href="login.html"><b>Logout</b></a>
+    </header>
+    <nav>
+        <a href="About.html">About</a>
+        <a href="Feedback and Contact.html">Feedback</a>
+    </nav>
+	<h1 class="h1">Must Visit Destinations</h1>
+    <div class="container">
+        <div class="spot">
+            <a href="munnar.html">
+            <img src="munnar.jpg" alt="Munnar">
+        </a>
+            <div class="spot-content">
+                <h2 >Munnar</h2>
+                <p>Munnar is a town in the Western Ghats mountain range in India’s Kerala state. A hill station and former resort for the British Raj elite, it's surrounded by rolling hills dotted with tea plantations.</p>
+            </div>
+        </div>
+        <div class="spot">
+            <a href="Alleppey.html">
+            <img src="alleppey.jpeg" alt="Alleppey">
+            <div class="spot-content">
+            </a>
+                <h2>Alleppey</h2>
+                <p>Alappuzha (or Alleppey) is a city on the Laccadive Sea in the southern Indian state of Kerala. It's best known for houseboat cruises along the rustic Kerala backwaters, a network of tranquil canals and lagoons.</p>
+            </div>
+        </div>
+        <div class="spot">
+            <a href="Kovalam.html">
+            <img src="kovalam.jpeg" alt="Kovalam">
+            <div class="spot-content">
+            </a>
+                <h2>Kovalam</h2>
+                <p>Kovalam is a small coastal town in the southern Indian state of Kerala, south of Thiruvananthapuram. It's known for its palm-fringed beaches, including Lighthouse Beach, Hawa Beach, and Samudra Beach.</p>
+            </div>
+        </div>
+        <div class="spot">
+			<a href="varkala.html">
+            <img src="varkala.jpeg" alt="Varkala">
+            <div class="spot-content">
+			</a>
+                <h2>Varkala</h2>
+                <p>Varkala, a coastal town in Kerala, India, is renowned for its stunning cliffs overlooking the Arabian Sea. It attracts travelers with its pristine beaches, atmosphere and vibrant cafes.</p>
+            </div>
+        </div>
+
+        <div class="spot">
+			<a href="fortkochi.html">
+            <img src="Fort Kochi.jpg" alt="Fort Kochi">
+            <div class="spot-content">
+			</a>
+                <h2>Fort Kochi</h2>
+                <p>Fort Kochi, located in Kerala, India, is a historic coastal area known for its colonial architecture, diverse culture, and vibrant art scene. Visitors flock here to explore its picturesque streets, ancient forts, and bustling waterfront.</p>
+            </div>
+        </div>
+        <div class="spot">
+			<a href="wayanad.html">
+            <img src="wayanad.jpg" alt="Wayanad">
+            <div class="spot-content">
+			</a>
+                <h2>Wayanad</h2>
+                <p>Wayanad is a picturesque district in Kerala, offering lush green landscapes, wildlife sanctuaries, and adventurous trekking routes.</p>
+            </div>
+        </div>
+        <div class="spot">
+			 <a href="kumarakom.html">
+            <img src="kumarakom.jpeg" alt="Kumarakom">
+			</a>
+            <div class="spot-content">
+                <h2>Kumarakom</h2>
+                <p>Kumarakom is a beautiful village in Kerala, India, famous for its backwater tourism. It's known for its serene Vembanad Lake, lush greenery, and houseboat cruises. Visitors come to relax, enjoy nature </p>
+            </div>
+        </div>
+        <div class="spot">
+			 <a href="thrissur.html">
+            <img src="thrissur.jpg" alt="Thrissur">
+            <div class="spot-content">
+			</a>
+                <h2>Thrissur</h2>
+                <p>Thrissur is a city in Kerala, India. It's famous for its cultural heritage, festivals like Thrissur Pooram, and temples like Vadakkunnathan Temple.</p>
+            </div>
+        </div>
+        <div class="spot">
+			<a href="kozhikode.html">
+            <img src="kozhikode.jpg" alt="Kozhikode">
+            <div class="spot-content">
+			</a>
+                <h2>Kozhikode</h2>
+                <p>Kozhikode, a city in Kerala, India, boasts historic significance, scenic beaches,delectable cuisine. It's a blend of culture, heritage, offering a vibrant South Indian experience natural beauty</p>
+            </div>
+        </div>
+        <div class="spot">
+			  <a href="gavi.html">
+            <img src="gavi.jpg" alt="Gavi">
+            <div class="spot-content">
+			</a>
+				<h2>Gavi</h2>
+                <p>Gavi is a lovely place in Kerala full of trees and animals.People like to visit Gavi because it's calm and has pretty nature.You can see birds and maybe even elephants.It's a peaceful place for families and anyone likes being in nature.  </p>
+            </div>
+        </div>
+        <div class="spot">
+			  <a href="vagamon.html">
+            <img src="vagamon.jpeg" alt="Vagamon">
+            <div class="spot-content">
+			</a>
+				  <h2>Vagamon</h2>
+                <p>Vagamon is a beautiful place in Kerala with lots of green fields, hills covered in mist, and stunning views. It's great for people who love nature.</p>
+            </div>
+        </div>
+        <div class="spot">
+			  <a href="silentvalley.html">
+            <img src="Silent Valley National Park.jpeg" alt="Silent Valley National Park">
+            <div class="spot-content">
+			</a>
+                <h2>Silent Valley National Park</h2>
+                <p>Silent Valley National Park,located in the Nilgiri Hills,is a biodiversity hotspot known for its pristine rainforests,diverse wildlife,and rare plant species.</p>
+            </div>
+        </div>
+         </div>
+    <footer>
+        <div class="box-container">
+            <div class="box">
+                <h3>Quick Links</h3>
+                <a href="project.html">Home</a>
+                <a href="About.html">About</a>
+            </div>
+    
+            <div class="box">
+                <h3>Extra Links</h3>
+                <a href="login.html">My Account</a>
+                <a href="Feedback and Contact.html">Ask Questions</a>
+            </div>
+    
+            <div class="box">
+                <h3>Contact Info</h3>
+                <a href="#"> <i class="phone"></i> +91-976378490279 </a>
+                <a href="#"> <i class="fas fa-envelope"></i> Kerala@gmail.com </a>
+            </div>
+    
+            <div class="box">
+                <h3>Follow Us</h3>
+                <a href="https://twitter.com/search?q=%23visitkerala&src=typed_query" target="_blank"> <i class="fab fa-twitter"></i> Twitter </a>
+                <a href="https://www.instagram.com/explore/tags/visitkerala/" target="_blank"> <i class="fab fa-instagram"></i> Instagram </a>
+            </div>
+        </div>
+        <div class="credit">Made with 🤍 in <span style="font-size: large;">Kerala</div>
+    </footer>
+</body>
+</html>

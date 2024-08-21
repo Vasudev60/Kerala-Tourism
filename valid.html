@@ -1,0 +1,167 @@
+VALIDATION 
+
+ 
+
+<!DOCTYPE html> 
+
+<html lang="en"> 
+
+<head> 
+
+<title>Form Validation</title> 
+
+</head> 
+
+<body> 
+
+<form id="registrationForm"> 
+
+    <input type="text" id="username" placeholder="Username"> 
+
+    <span id="usernameError"></span><br> 
+
+    <input type="email" id="email" placeholder="Email"> 
+
+    <span id="emailError"></span><br> 
+
+    <input type="password" id="password" placeholder="Password"> 
+
+    <span id="passwordError"></span><br> 
+
+    <input type="password" id="confirmPassword" placeholder="Confirm Password"> 
+
+    <span id="confirmPasswordError"></span><br> 
+
+    <input type="text" id="phoneNumber" placeholder="Phone Number"> 
+
+    <span id="phoneNumberError"></span><br> 
+
+    <input type="text" id="dateOfBirth" placeholder="Date of Birth (MM/DD/YYYY)"> 
+
+    <span id="dateOfBirthError"></span><br> 
+
+    <button type="button" onclick="validateForm()">Submit</button> 
+
+</form> 
+
+<script> 
+
+function validateForm() { 
+
+    const username = document.getElementById('username').value; 
+
+    const email = document.getElementById('email').value;  
+
+    const password = document.getElementById('password').value; 
+
+    const confirmPassword = document.getElementById('confirmPassword').value; 
+
+    const phoneNumber = document.getElementById('phoneNumber').value; 
+
+    const dateOfBirth = document.getElementById('dateOfBirth').value; 
+
+    const usernameRegex = /^[a-zA-Z0-9_]{4,20}$/; 
+
+    if (!usernameRegex.test(username)) { 
+
+        document.getElementById('usernameError').innerText = 'Invalid username'; 
+
+        return; 
+
+    } else { 
+
+        document.getElementById('usernameError').innerText = ''; 
+
+    } 
+
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/; 
+
+    if (!emailRegex.test(email)) { 
+
+        document.getElementById('emailError').innerText = 'Invalid email'; 
+
+        return; 
+
+    } else { 
+
+        document.getElementById('emailError').innerText = ''; 
+
+    } 
+
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/; 
+
+    if (!passwordRegex.test(password)) { 
+
+        document.getElementById('passwordError').innerText = 'Invalid password'; 
+
+        return; 
+
+    } else { 
+
+        document.getElementById('passwordError').innerText = ''; 
+
+    } 
+
+    if (password !== confirmPassword) { 
+
+        document.getElementById('confirmPasswordError').innerText = 'Passwords do not match'; 
+
+        return; 
+
+    } else { 
+
+        document.getElementById('confirmPasswordError').innerText = ''; 
+
+    } 
+
+    const phoneNumberRegex = /^\d{3}[- ]?\d{3}[- ]?\d{4}$/; 
+
+    if (!phoneNumberRegex.test(phoneNumber)) { 
+
+        document.getElementById('phoneNumberError').innerText = 'Invalid phone number'; 
+
+        return; 
+
+    } else { 
+
+        document.getElementById('phoneNumberError').innerText = ''; 
+
+    } 
+
+    const currentDate = new Date(); 
+
+    const inputDate = new Date(dateOfBirth); 
+
+    if (isNaN(inputDate.getTime()) || inputDate > currentDate) { 
+
+        document.getElementById('dateOfBirthError').innerText = 'Invalid date of birth'; 
+
+        return; 
+
+    } else { 
+
+        document.getElementById('dateOfBirthError').innerText = ''; 
+
+    } 
+
+    document.getElementById('registrationForm').submit(); 
+
+} 
+
+</script> 
+
+ 
+
+</body> 
+
+</html> 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
